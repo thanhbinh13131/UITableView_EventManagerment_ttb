@@ -15,10 +15,18 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var eventContent: UITextView!
     
+    @IBOutlet weak var eventDate: UILabel!
+    
+    
+    var event: Event?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        eventTitle.text = event?.title;
+        eventDate.text = event?.date;
+        eventContent.text = event?.description;
+        
     }
 
     override func didReceiveMemoryWarning() {
